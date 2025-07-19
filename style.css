@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 5%;
+}
+
+nav a,
+nav li {
+    color: rgb(236, 55, 55);
+}
+
+h1 {
+    font-size: 40px;
+    font-family: pacifico, cursive;
+    margin: 10px 0;
+    text-align: center;
+}
+
+body {
+    font-family: roboto, sans-serif;
+    margin: 10px 0 10px;
+}
+
+
+/* Margin: si le bas n'est pas donne alors=haut ,si la gauche n'est pas donne alors = droite */
+
+h2 {
+    margin: 0, 83em 0 0 10px;
+}
+
+ul {
+    margin: 5px 0 10px 10px;
+    /* list-style: none; permet de supprimer les cercles qui sont sur les liens*/
+    display: flex;
+    gap: 50px;
+    /* permet de mettre nos liens en element de type ligne ou inlign */
+}
+
+header {
+    font-size: 60px;
+    font-family: "pacifico", cursive;
+    color: white;
+    text-shadow: 0 0 30px black;
+}
+
+footer {
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
+    background: left/100px url("https://th.bing.com/th?id=OIP.Jfsr-n0QNsXuv1eFu883zwHaHa&w=250&h=250&c=8&rs=1&qlt=30&o=6&pid=3.1&rm=2"), rgb(148, 97, 97)
+}
+
+a {
+    text-decoration: none;
+}
+
+#Bienvenue {
+    background-image: url("../images/japon.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+}
+
+#slogan {
+    display: block;
+    font-size: 30px;
+    font-family: "roboto", arial, sans-serif;
+}
+
+#top {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#tokyo {
+    background-image: url("https://th.bing.com/th/id/R.cce27eb851806b0d04d78fc415fcf1e7?rik=HR2yYQNfhIioGg&pid=ImgRaw&r=0");
+    grid-row: 1 / 4;
+}
+
+#kyoto {
+    background-image: url("https://th.bing.com/th/id/OIP.PFdiiG-2pf9-rs1VGR5HOgHaE8?rs=1&pid=ImgDetMain");
+    grid-column: 2 / 4;
+    /* grid-row: ; */
+}
+
+#osaka {
+    background-image: url("https://th.bing.com/th/id/OIP.0qVCZulawV3mFEhSxplhAgHaE7?rs=1&pid=ImgDetMain");
+}
+
+#nara {
+    background-image: url("https://th.bing.com/th/id/OIP.Vvjz816adXa_PmSbdmjVvwHaFj?rs=1&pid=ImgDetMain");
+}
+
+#flexboxville {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30Px;
+}
+
+#voir {
+    display: inline-flex;
+    align-items: center;
+    color: #FF7373;
+    transition: all 0.4s;
+    gap: 0;
+}
+
+#voir:hover {
+    gap: 10px;
+}
+
+#flexboxfoot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+
+/* #voir:visited {
+    font-weight: bold;
+} devient gras si le visiteur a visite le site*/
+
+.ville {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    min-width: 350px;
+    border: 3px solid white;
+    transition: all 0.3s;
+    border: 3px solid white;
+    border-radius: 50px;
+    font-size: 50px;
+    color: rgb(243, 247, 247);
+    text-shadow: 0 0 30px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.ville:hover {
+    border: 3px solid #FF7373;
+}
+
+.mot {
+    color: rgb(245, 17, 55);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.b {
+    font-family: "roboto", Arial, Helvetica, sans-serif;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: line-through;
+}
+
+.contenue {
+    padding: 10px;
+}
+
+.conteneur {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* element 1 = appliquer a element 1 */
+
+
+/* element 1,elemeng 2 = apliquer a element 1 et element 2 */
+
+
+/* element 0 element 1 =appiquer dans element 1 s'il est dans element 0 */
+
+
+/* "LE RESPONSIVE DESIGN"Il permet d'adapter notre site internet aux appareils mobiles comme les telephones les tablettes et autres */
+
+@media all and (max-width: 1000px) {
+    .conteneur {
+        width: 800px;
+    }
+    #flexboxville {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #kyoto {
+        grid-column: auto;
+    }
+    #nara {
+        grid-column: 1 / 3;
+    }
+}
+
+@media all and (max-width: 950px) {
+    .conteneur {
+        width: 500px;
+    }
+    #flexboxville {
+        grid-template-columns: 1fr;
+    }
+    #tokyo {
+        grid-row: auto;
+    }
+    #nara {
+        grid-column: auto;
+    }
+    #flexboxfoot {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #imagefoot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .conteneur {
+        width: 100%;
+    }
+}
